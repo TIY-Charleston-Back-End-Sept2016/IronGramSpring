@@ -1,6 +1,7 @@
 package com.theironyard.entities;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 /**
  * Created by zach on 10/28/16.
@@ -17,6 +18,8 @@ public class Recipient {
 
     @ManyToOne
     User user;
+
+    LocalDateTime viewed;
 
     public Recipient() {
     }
@@ -48,5 +51,13 @@ public class Recipient {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public LocalDateTime getViewed() {
+        return viewed;
+    }
+
+    public void setViewed(LocalDateTime viewed) {
+        this.viewed = viewed;
     }
 }
